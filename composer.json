@@ -1,0 +1,20 @@
+{
+    "name": "texasdemocrats/pdfconverter",
+    "description": "Converter for county-specific results in PDF format to JSON",
+    "type": "project",
+    "require": {
+        "smalot/pdfparser": "^0.13.2",
+        "monolog/monolog": "^1.24"
+    },
+    "authors": [
+        {
+            "name": "Tyler Chamberlain",
+            "email": "hexarobi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TexasDemocrats\\PdfConverter\\": "src/"
+        }
+    }
+}
