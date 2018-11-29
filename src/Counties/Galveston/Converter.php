@@ -7,14 +7,16 @@ use TexasDemocrats\PdfConverter\ConverterTemplate;
 class Converter extends ConverterTemplate
 {
 
+    private const PAGE_PATTERN = '([^\n]+)\n([^\n]+)Page (\d+) of (\d+)\nTotal Number of Voters : ([\d,]+) of ([\d,]+) = [\d.]+% (\d+\/\d+\/\d+ \d+:\d+ (AM|PM))\nPrecincts Reporting (\d+) of (\d+) = ([\d.]+)%\s+\nElection\s+Early\s+Absentee\s+Total\s+Party\s+Candidate(.*)';
+    private const RACE_PATTERN = '([^\n]*), Vote For 1\s+(.*?)\s+([\d,]+)\s+([\d,]+)\s+Cast Votes: [\d.]+%\s*[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)';
+    private const CHOICE_PATTERN = '\s*([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)\s+([^\n]*)\s*([^\n\d]*)';
+
     public function parsePageText($pageText) : array {
 
         // convert HTML entities back into standard text for better parsing results
         $pageText = html_entity_decode($pageText, ENT_QUOTES);
 
-        $pagePattern = '([^\n]+)\n([^\n]+)Page (\d+) of (\d+)\nTotal Number of Voters : ([\d,]+) of ([\d,]+) = [\d.]+% (\d+\/\d+\/\d+ \d+:\d+ (AM|PM))\nPrecincts Reporting (\d+) of (\d+) = ([\d.]+)%\s+\nElection\s+Early\s+Absentee\s+Total\s+Party\s+Candidate(.*)';
-
-        $matches = $this->getRegExMatches($pagePattern, $pageText);
+        $matches = $this->getRegExMatches(self::PAGE_PATTERN, $pageText);
 
         return [
             'main_title' => $matches[1][0],
@@ -34,9 +36,7 @@ class Converter extends ConverterTemplate
     private function parseRacesText($racesText): array
     {
 
-        $racesPattern = '([^\n]*), Vote For 1\s+(.*?)\s+([\d,]+)\s+([\d,]+)\s+Cast Votes: [\d.]+%\s*[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)';
-
-        $matches = $this->getRegExMatches($racesPattern, $racesText);
+        $matches = $this->getRegExMatches(self::RACE_PATTERN, $racesText);
 
         $results = [];
 
@@ -61,9 +61,7 @@ class Converter extends ConverterTemplate
     private function parseChoicesText($choicesText): array
     {
 
-        $choicePattern = '\s*([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)\s+([^\n]*)\s*([^\n\d]*)';
-
-        $matches = $this->getRegExMatches($choicePattern, $choicesText);
+        $matches = $this->getRegExMatches(self::CHOICE_PATTERN, $choicesText);
 
         $results = [];
 
