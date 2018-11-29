@@ -2,7 +2,6 @@
 
 namespace TexasDemocrats\PdfConverter\Counties\Galveston;
 
-use RuntimeException;
 use TexasDemocrats\PdfConverter\ConverterTemplate;
 
 class Converter extends ConverterTemplate
@@ -27,45 +26,34 @@ class Converter extends ConverterTemplate
             'report generated date time' => $matches[7][0],
             'precincts reporting' => $matches[9][0],
             'total precincts' => $matches[10][0],
-            'rows' => $this->parseRowText($matches[12][0]),
+            'races' => $this->parseRacesText($matches[12][0]),
         ];
 
     }
 
-    private function parseRowText($rowText): array
+    private function parseRacesText($racesText): array
     {
 
-        $rowPattern = '([^\n]*), Vote For 1\s+(.*?)\s+([\d,]+)\s+([\d,]+)\s+Cast Votes: [\d.]+%\s*[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)';
+        $racesPattern = '([^\n]*), Vote For 1\s+(.*?)\s+([\d,]+)\s+([\d,]+)\s+Cast Votes: [\d.]+%\s*[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+([\d,]+)';
 
-        $matches = $this->getRegExMatches($rowPattern, $rowText);
+        $matches = $this->getRegExMatches($racesPattern, $racesText);
 
         $results = [];
 
-        foreach ($matches[1] as $raceIndex=>$raceName) {
-            // init an array at this index
-            $results[$raceIndex] = [];
-            $results[$raceIndex]['name'] = $raceName;
-        }
-
-        foreach ($matches[5] as $raceIndex=>$raceEarlyVotes) {
-            $results[$raceIndex]['total absentee votes'] = $raceEarlyVotes;
-        }
-
-        foreach ($matches[6] as $raceIndex=>$raceEarlyVotes) {
-            $results[$raceIndex]['total early votes'] = $raceEarlyVotes;
-        }
-
-        foreach ($matches[3] as $raceIndex=>$raceElectionDayVotes) {
-            $results[$raceIndex]['total election day votes'] = $raceElectionDayVotes;
-        }
-
-        foreach ($matches[4] as $raceIndex=>$raceVotes) {
-            $results[$raceIndex]['total race votes'] = $raceVotes;
-        }
-
-        foreach ($matches[2] as $raceIndex=>$raceChoicesText) {
-            $results[$raceIndex]['choices'] = $this->parseChoicesText($raceChoicesText);
-        }
+        $this->addToResults($results, 'name', $matches[1]);
+        $this->addToResults($results, 'total absentee votes', $matches[5]);
+        $this->addToResults($results, 'total early votes', $matches[6]);
+        $this->addToResults($results, 'total election day votes', $matches[3]);
+        $this->addToResults($results, 'total race votes', $matches[3]);
+        $this->addToResults($results, 'total election day votes', $matches[4]);
+        $this->addToResults(
+            $results,
+            'choices',
+            $matches[2],
+            function($text) {
+                return $this->parseChoicesText($text);
+            }
+        );
 
         return $results;
     }
@@ -79,40 +67,36 @@ class Converter extends ConverterTemplate
 
         $results = [];
 
-        // not every race has both a name and party listed
-        if ($matches[6]) {
+        $nameMatches = $matches[6];
+        $partyMatches = $matches[5];
 
-            foreach ($matches[6] as $choiceIndex=>$choiceName) {
-                $results[$choiceIndex] = [];
-                $results[$choiceIndex]['name'] = $this->cleanName($choiceName);
+        // not every race has both a name and party listed, if no name use party for both
+        if (! $nameMatches) {
+            $nameMatches = $partyMatches;
+        }
+
+        $this->addToResults(
+            $results,
+            'name',
+            $nameMatches,
+            function($text) {
+                return $this->cleanName($text);
             }
-            foreach ($matches[5] as $choiceIndex=>$choiceName) {
-                $results[$choiceIndex]['party'] = $this->cleanName($choiceName);
+        );
+
+        $this->addToResults(
+            $results,
+            'party',
+            $partyMatches,
+            function($text) {
+                return $this->cleanName($text);
             }
+        );
 
-        } else {
-            foreach ($matches[5] as $choiceIndex=>$choiceName) {
-                $results[$choiceIndex] = [];
-                $results[$choiceIndex]['name'] = $this->cleanName($choiceName);
-                $results[$choiceIndex]['party'] = $this->cleanName($choiceName);
-            }
-        }
-
-        foreach ($matches[3] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['absentee votes'] = $choiceEarly;
-        }
-
-        foreach ($matches[4] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['early votes'] = $choiceEarly;
-        }
-
-        foreach ($matches[1] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['election day votes'] = $choiceEarly;
-        }
-
-        foreach ($matches[2] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['total votes'] = $choiceEarly;
-        }
+        $this->addToResults($results, 'absentee votes', $matches[3]);
+        $this->addToResults($results, 'early votes', $matches[4]);
+        $this->addToResults($results, 'election day votes', $matches[1]);
+        $this->addToResults($results, 'total votes', $matches[2]);
 
         return $results;
     }

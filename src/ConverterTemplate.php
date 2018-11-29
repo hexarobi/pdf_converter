@@ -2,6 +2,7 @@
 
 namespace TexasDemocrats\PdfConverter;
 
+use Closure;
 use DirectoryIterator;
 use Exception;
 use RuntimeException;
@@ -130,11 +131,38 @@ abstract class ConverterTemplate implements ConverterInterface {
         return $info['dirname'] . '/' . $info['filename'] . '.' . $new_extension;
     }
 
+    /**
+     * @param $pattern
+     * @param $text
+     * @return mixed
+     */
     protected function getRegExMatches($pattern, $text) {
         if (! preg_match_all("/$pattern/ms", $text, $matches)) {
             throw new RuntimeException('Could not match pattern');
         }
         return $matches;
+    }
+
+    /**
+     * @param $results
+     * @param $fieldName
+     * @param array $array
+     * @param Closure|null $parser
+     */
+    public function addToResults(&$results, $fieldName, array $array, Closure $parser = null) {
+        foreach ($array as $key=>$value) {
+
+            // init result at key
+            if (! isset($results[$key])) {
+                $results[$key] = [];
+            }
+
+            if ($parser) {
+                $value = $parser($value);
+            }
+
+            $results[$key][$fieldName] = $value;
+        }
     }
 
 }

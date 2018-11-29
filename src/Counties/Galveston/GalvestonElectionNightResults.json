@@ -9,13 +9,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Straight Party",
                 "total absentee votes": "5,557",
                 "total early votes": "51,738",
-                "total election day votes": "14,475",
-                "total race votes": "71,770",
+                "total election day votes": "71,770",
+                "total race votes": "14,475",
                 "choices": [
                     {
                         "name": "",
@@ -47,8 +47,8 @@
                 "name": "U.S. Senator",
                 "total absentee votes": "7,987",
                 "total early votes": "82,406",
-                "total election day votes": "23,229",
-                "total race votes": "113,622",
+                "total election day votes": "113,622",
+                "total race votes": "23,229",
                 "choices": [
                     {
                         "name": "Ted Cruz",
@@ -80,8 +80,8 @@
                 "name": "U.S. Representative, District 14",
                 "total absentee votes": "7,924",
                 "total early votes": "82,015",
-                "total election day votes": "23,043",
-                "total race votes": "112,982",
+                "total election day votes": "112,982",
+                "total race votes": "23,043",
                 "choices": [
                     {
                         "name": "Randy Weber",
@@ -113,8 +113,8 @@
                 "name": "Governor",
                 "total absentee votes": "7,959",
                 "total early votes": "82,286",
-                "total election day votes": "23,190",
-                "total race votes": "113,435",
+                "total election day votes": "113,435",
+                "total race votes": "23,190",
                 "choices": [
                     {
                         "name": "Greg Abbott",
@@ -146,8 +146,8 @@
                 "name": "Lieutenant Governor",
                 "total absentee votes": "7,950",
                 "total early votes": "82,058",
-                "total election day votes": "23,064",
-                "total race votes": "113,072",
+                "total election day votes": "113,072",
+                "total race votes": "23,064",
                 "choices": [
                     {
                         "name": "Dan Patrick",
@@ -187,13 +187,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Attorney General",
                 "total absentee votes": "7,919",
                 "total early votes": "81,850",
-                "total election day votes": "23,004",
-                "total race votes": "112,773",
+                "total election day votes": "112,773",
+                "total race votes": "23,004",
                 "choices": [
                     {
                         "name": "Ken Paxton",
@@ -225,8 +225,8 @@
                 "name": "Comptroller of Public Accounts",
                 "total absentee votes": "7,870",
                 "total early votes": "81,329",
-                "total election day votes": "22,793",
-                "total race votes": "111,992",
+                "total election day votes": "111,992",
+                "total race votes": "22,793",
                 "choices": [
                     {
                         "name": "Glenn Hegar",
@@ -258,8 +258,8 @@
                 "name": "Commissioner of General Land Office",
                 "total absentee votes": "7,933",
                 "total early votes": "81,699",
-                "total election day votes": "22,943",
-                "total race votes": "112,575",
+                "total election day votes": "112,575",
+                "total race votes": "22,943",
                 "choices": [
                     {
                         "name": "George P. Bush",
@@ -291,8 +291,8 @@
                 "name": "Commissioner of Agriculture",
                 "total absentee votes": "7,895",
                 "total early votes": "81,439",
-                "total election day votes": "22,822",
-                "total race votes": "112,156",
+                "total election day votes": "112,156",
+                "total race votes": "22,822",
                 "choices": [
                     {
                         "name": "Sid Miller",
@@ -324,8 +324,8 @@
                 "name": "Railroad Commissioner",
                 "total absentee votes": "7,862",
                 "total early votes": "81,393",
-                "total election day votes": "22,826",
-                "total race votes": "112,081",
+                "total election day votes": "112,081",
+                "total race votes": "22,826",
                 "choices": [
                     {
                         "name": "Christi Craddick",
@@ -365,13 +365,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Justice, Supreme Court, Place 2",
                 "total absentee votes": "7,798",
                 "total early votes": "81,301",
-                "total election day votes": "22,763",
-                "total race votes": "111,862",
+                "total election day votes": "111,862",
+                "total race votes": "22,763",
                 "choices": [
                     {
                         "name": "Jimmy Blacklock",
@@ -395,8 +395,8 @@
                 "name": "Justice, Supreme Court, Place 4",
                 "total absentee votes": "7,771",
                 "total early votes": "81,205",
-                "total election day votes": "22,721",
-                "total race votes": "111,697",
+                "total election day votes": "111,697",
+                "total race votes": "22,721",
                 "choices": [
                     {
                         "name": "John Devine",
@@ -420,8 +420,8 @@
                 "name": "Justice, Supreme Court, Place 6",
                 "total absentee votes": "7,814",
                 "total early votes": "81,212",
-                "total election day votes": "22,744",
-                "total race votes": "111,770",
+                "total election day votes": "111,770",
+                "total race votes": "22,744",
                 "choices": [
                     {
                         "name": "Jeff Brown",
@@ -445,8 +445,8 @@
                 "name": "Presiding Judge, Court of Criminal Appeals",
                 "total absentee votes": "7,840",
                 "total early votes": "81,242",
-                "total election day votes": "22,778",
-                "total race votes": "111,860",
+                "total election day votes": "111,860",
+                "total race votes": "22,778",
                 "choices": [
                     {
                         "name": "Sharon Keller",
@@ -478,8 +478,8 @@
                 "name": "Judge, Court of Criminal Appeals, Place 7",
                 "total absentee votes": "7,795",
                 "total early votes": "81,030",
-                "total election day votes": "22,684",
-                "total race votes": "111,509",
+                "total election day votes": "111,509",
+                "total race votes": "22,684",
                 "choices": [
                     {
                         "name": "Barbara Parker Hervey",
@@ -503,8 +503,8 @@
                 "name": "Judge, Court of Criminal Appeals, Place 8",
                 "total absentee votes": "5,478",
                 "total early votes": "68,512",
-                "total election day votes": "18,553",
-                "total race votes": "92,543",
+                "total election day votes": "92,543",
+                "total race votes": "18,553",
                 "choices": [
                     {
                         "name": "Michelle Slaughter",
@@ -536,13 +536,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Member, State Board of Education, District 7",
                 "total absentee votes": "7,664",
                 "total early votes": "81,131",
-                "total election day votes": "22,704",
-                "total race votes": "111,499",
+                "total election day votes": "111,499",
+                "total race votes": "22,704",
                 "choices": [
                     {
                         "name": "Matt Robinson",
@@ -566,8 +566,8 @@
                 "name": "State Representative, District 23",
                 "total absentee votes": "3,507",
                 "total early votes": "29,787",
-                "total election day votes": "10,026",
-                "total race votes": "43,320",
+                "total election day votes": "43,320",
+                "total race votes": "10,026",
                 "choices": [
                     {
                         "name": "Mayes Middleton",
@@ -599,8 +599,8 @@
                 "name": "State Representative, District 24",
                 "total absentee votes": "4,299",
                 "total early votes": "51,885",
-                "total election day votes": "12,852",
-                "total race votes": "69,036",
+                "total election day votes": "69,036",
+                "total race votes": "12,852",
                 "choices": [
                     {
                         "name": "Greg Bonnen",
@@ -632,8 +632,8 @@
                 "name": "Justice, 1st Court of Appeals District, Place 2",
                 "total absentee votes": "7,719",
                 "total early votes": "80,909",
-                "total election day votes": "22,644",
-                "total race votes": "111,272",
+                "total election day votes": "111,272",
+                "total race votes": "22,644",
                 "choices": [
                     {
                         "name": "Jane Bland",
@@ -657,8 +657,8 @@
                 "name": "Justice, 1st Court of Appeals District, Place 6",
                 "total absentee votes": "7,617",
                 "total early votes": "80,917",
-                "total election day votes": "22,639",
-                "total race votes": "111,173",
+                "total election day votes": "111,173",
+                "total race votes": "22,639",
                 "choices": [
                     {
                         "name": "Harvey Brown",
@@ -682,8 +682,8 @@
                 "name": "Justice, 1st Court of Appeals District, Place 7",
                 "total absentee votes": "7,617",
                 "total early votes": "80,897",
-                "total election day votes": "22,622",
-                "total race votes": "111,136",
+                "total election day votes": "111,136",
+                "total race votes": "22,622",
                 "choices": [
                     {
                         "name": "Terry Yates",
@@ -715,13 +715,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Justice, 1st Court of Appeals District, Place 8",
                 "total absentee votes": "7,618",
                 "total early votes": "80,897",
-                "total election day votes": "22,616",
-                "total race votes": "111,131",
+                "total election day votes": "111,131",
+                "total race votes": "22,616",
                 "choices": [
                     {
                         "name": "Michael Massengale",
@@ -745,8 +745,8 @@
                 "name": "Justice, 1st Court of Appeals District, Place 9",
                 "total absentee votes": "7,623",
                 "total early votes": "80,844",
-                "total election day votes": "22,611",
-                "total race votes": "111,078",
+                "total election day votes": "111,078",
+                "total race votes": "22,611",
                 "choices": [
                     {
                         "name": "Jennifer Caughey",
@@ -770,8 +770,8 @@
                 "name": "Justice, 14th Court of Appeals District, Place 3",
                 "total absentee votes": "7,588",
                 "total early votes": "80,778",
-                "total election day votes": "22,580",
-                "total race votes": "110,946",
+                "total election day votes": "110,946",
+                "total race votes": "22,580",
                 "choices": [
                     {
                         "name": "Brett Busby",
@@ -795,8 +795,8 @@
                 "name": "Justice, 14th Court of Appeals District, Place 4",
                 "total absentee votes": "7,615",
                 "total early votes": "80,702",
-                "total election day votes": "22,538",
-                "total race votes": "110,855",
+                "total election day votes": "110,855",
+                "total race votes": "22,538",
                 "choices": [
                     {
                         "name": "Marc Brown",
@@ -820,8 +820,8 @@
                 "name": "Justice, 14th Court of Appeals District, Place 5",
                 "total absentee votes": "7,606",
                 "total early votes": "80,677",
-                "total election day votes": "22,541",
-                "total race votes": "110,824",
+                "total election day votes": "110,824",
+                "total race votes": "22,541",
                 "choices": [
                     {
                         "name": "Martha Hill Jamison",
@@ -845,8 +845,8 @@
                 "name": "Justice, 14th Court of Appeals District, Place 6",
                 "total absentee votes": "7,632",
                 "total early votes": "80,710",
-                "total election day votes": "22,562",
-                "total race votes": "110,904",
+                "total election day votes": "110,904",
+                "total race votes": "22,562",
                 "choices": [
                     {
                         "name": "Bill Boyce",
@@ -878,13 +878,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Justice, 14th Court of Appeals District, Place 8",
                 "total absentee votes": "7,632",
                 "total early votes": "80,709",
-                "total election day votes": "22,558",
-                "total race votes": "110,899",
+                "total election day votes": "110,899",
+                "total race votes": "22,558",
                 "choices": [
                     {
                         "name": "John Donovan",
@@ -908,8 +908,8 @@
                 "name": "District Judge, 122nd Judicial District",
                 "total absentee votes": "4,449",
                 "total early votes": "57,826",
-                "total election day votes": "15,622",
-                "total race votes": "77,897",
+                "total election day votes": "77,897",
+                "total race votes": "15,622",
                 "choices": [
                     {
                         "name": "John Ellisor",
@@ -925,8 +925,8 @@
                 "name": "District Judge, 212th Judicial District",
                 "total absentee votes": "4,421",
                 "total early votes": "57,668",
-                "total election day votes": "15,637",
-                "total race votes": "77,726",
+                "total election day votes": "77,726",
+                "total race votes": "15,637",
                 "choices": [
                     {
                         "name": "Patricia Grady",
@@ -942,8 +942,8 @@
                 "name": "District Judge, 306th Judicial District",
                 "total absentee votes": "4,411",
                 "total early votes": "57,506",
-                "total election day votes": "15,593",
-                "total race votes": "77,510",
+                "total election day votes": "77,510",
+                "total race votes": "15,593",
                 "choices": [
                     {
                         "name": "Anne B. Darring",
@@ -959,8 +959,8 @@
                 "name": "Criminal District Attorney",
                 "total absentee votes": "4,540",
                 "total early votes": "57,562",
-                "total election day votes": "15,570",
-                "total race votes": "77,672",
+                "total election day votes": "77,672",
+                "total race votes": "15,570",
                 "choices": [
                     {
                         "name": "Jack Roady",
@@ -976,8 +976,8 @@
                 "name": "County Judge",
                 "total absentee votes": "4,463",
                 "total early votes": "57,034",
-                "total election day votes": "15,551",
-                "total race votes": "77,048",
+                "total election day votes": "77,048",
+                "total race votes": "15,551",
                 "choices": [
                     {
                         "name": "Mark Henry",
@@ -993,8 +993,8 @@
                 "name": "Judge, County Court-at-Law No. 1",
                 "total absentee votes": "4,384",
                 "total early votes": "56,902",
-                "total election day votes": "15,364",
-                "total race votes": "76,650",
+                "total election day votes": "76,650",
+                "total race votes": "15,364",
                 "choices": [
                     {
                         "name": "John Grady",
@@ -1018,13 +1018,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Judge, County Court-at-Law No. 2",
                 "total absentee votes": "7,592",
                 "total early votes": "80,679",
-                "total election day votes": "22,536",
-                "total race votes": "110,807",
+                "total election day votes": "110,807",
+                "total race votes": "22,536",
                 "choices": [
                     {
                         "name": "Kerri Foley",
@@ -1048,8 +1048,8 @@
                 "name": "Judge, County Court-at-Law No. 3",
                 "total absentee votes": "4,440",
                 "total early votes": "57,181",
-                "total election day votes": "15,418",
-                "total race votes": "77,039",
+                "total election day votes": "77,039",
+                "total race votes": "15,418",
                 "choices": [
                     {
                         "name": "Jack Ewing",
@@ -1065,8 +1065,8 @@
                 "name": "Judge, County Probate Court-at-Law",
                 "total absentee votes": "4,461",
                 "total early votes": "57,355",
-                "total election day votes": "15,490",
-                "total race votes": "77,306",
+                "total election day votes": "77,306",
+                "total race votes": "15,490",
                 "choices": [
                     {
                         "name": "Kim Sullivan",
@@ -1082,8 +1082,8 @@
                 "name": "District Clerk",
                 "total absentee votes": "4,451",
                 "total early votes": "57,203",
-                "total election day votes": "15,462",
-                "total race votes": "77,116",
+                "total election day votes": "77,116",
+                "total race votes": "15,462",
                 "choices": [
                     {
                         "name": "John D Kinard",
@@ -1099,8 +1099,8 @@
                 "name": "County Clerk",
                 "total absentee votes": "4,484",
                 "total early votes": "57,148",
-                "total election day votes": "15,451",
-                "total race votes": "77,083",
+                "total election day votes": "77,083",
+                "total race votes": "15,451",
                 "choices": [
                     {
                         "name": "Dwight Sullivan",
@@ -1116,8 +1116,8 @@
                 "name": "County Treasurer",
                 "total absentee votes": "4,427",
                 "total early votes": "57,035",
-                "total election day votes": "15,389",
-                "total race votes": "76,851",
+                "total election day votes": "76,851",
+                "total race votes": "15,389",
                 "choices": [
                     {
                         "name": "Kevin C. Walsh",
@@ -1133,8 +1133,8 @@
                 "name": "County Commissioner Pct. 2",
                 "total absentee votes": "1,307",
                 "total early votes": "17,816",
-                "total election day votes": "4,747",
-                "total race votes": "23,870",
+                "total election day votes": "23,870",
+                "total race votes": "4,747",
                 "choices": [
                     {
                         "name": "Joe Giusti",
@@ -1158,13 +1158,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "County Commissioner Pct. 4",
                 "total absentee votes": "1,472",
                 "total early votes": "19,648",
-                "total election day votes": "4,643",
-                "total race votes": "25,763",
+                "total election day votes": "25,763",
+                "total race votes": "4,643",
                 "choices": [
                     {
                         "name": "Ken Clark",
@@ -1180,8 +1180,8 @@
                 "name": "Justice of the Peace Pct. 1",
                 "total absentee votes": "1,181",
                 "total early votes": "15,426",
-                "total election day votes": "4,468",
-                "total race votes": "21,075",
+                "total election day votes": "21,075",
+                "total race votes": "4,468",
                 "choices": [
                     {
                         "name": "Greg Rikard",
@@ -1197,8 +1197,8 @@
                 "name": "Justice of the Peace Pct. 2",
                 "total absentee votes": "1,463",
                 "total early votes": "17,367",
-                "total election day votes": "4,913",
-                "total race votes": "23,743",
+                "total election day votes": "23,743",
+                "total race votes": "4,913",
                 "choices": [
                     {
                         "name": "Mike Nelson",
@@ -1214,8 +1214,8 @@
                 "name": "Justice of the Peace Pct. 3",
                 "total absentee votes": "872",
                 "total early votes": "5,608",
-                "total election day votes": "2,273",
-                "total race votes": "8,753",
+                "total election day votes": "8,753",
+                "total race votes": "2,273",
                 "choices": [
                     {
                         "name": "Billy A. Williams, Jr.",
@@ -1231,8 +1231,8 @@
                 "name": "College of the Mainland Proposition A",
                 "total absentee votes": "2,687",
                 "total early votes": "26,317",
-                "total election day votes": "7,678",
-                "total race votes": "36,682",
+                "total election day votes": "36,682",
+                "total race votes": "7,678",
                 "choices": [
                     {
                         "name": "",
@@ -1256,8 +1256,8 @@
                 "name": "Mayor  - League City",
                 "total absentee votes": "1,623",
                 "total early votes": "21,222",
-                "total election day votes": "5,614",
-                "total race votes": "28,459",
+                "total election day votes": "28,459",
+                "total race votes": "5,614",
                 "choices": [
                     {
                         "name": "Sebastian Lofaro",
@@ -1281,8 +1281,8 @@
                 "name": "Council Position 1  - League City",
                 "total absentee votes": "1,426",
                 "total early votes": "18,420",
-                "total election day votes": "5,057",
-                "total race votes": "24,903",
+                "total election day votes": "24,903",
+                "total race votes": "5,057",
                 "choices": [
                     {
                         "name": "Andy Mann",
@@ -1314,13 +1314,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Council Position 2  - League City",
                 "total absentee votes": "1,120",
                 "total early votes": "15,974",
-                "total election day votes": "4,438",
-                "total race votes": "21,532",
+                "total election day votes": "21,532",
+                "total race votes": "4,438",
                 "choices": [
                     {
                         "name": "Hank Dugie",
@@ -1336,8 +1336,8 @@
                 "name": "Council Position 6  - League City",
                 "total absentee votes": "1,401",
                 "total early votes": "18,222",
-                "total election day votes": "4,965",
-                "total race votes": "24,588",
+                "total election day votes": "24,588",
+                "total race votes": "4,965",
                 "choices": [
                     {
                         "name": "Silvio P. Vincenzo",
@@ -1369,8 +1369,8 @@
                 "name": "Council Position 7  - League City",
                 "total absentee votes": "1,462",
                 "total early votes": "18,986",
-                "total election day votes": "5,070",
-                "total race votes": "25,518",
+                "total election day votes": "25,518",
+                "total race votes": "5,070",
                 "choices": [
                     {
                         "name": "Ange Mertens",
@@ -1394,8 +1394,8 @@
                 "name": "League City Proposition A",
                 "total absentee votes": "1,878",
                 "total early votes": "21,340",
-                "total election day votes": "5,701",
-                "total race votes": "28,919",
+                "total election day votes": "28,919",
+                "total race votes": "5,701",
                 "choices": [
                     {
                         "name": "",
@@ -1419,8 +1419,8 @@
                 "name": "League City Proposition B",
                 "total absentee votes": "1,929",
                 "total early votes": "22,699",
-                "total election day votes": "6,084",
-                "total race votes": "30,712",
+                "total election day votes": "30,712",
+                "total race votes": "6,084",
                 "choices": [
                     {
                         "name": "",
@@ -1444,8 +1444,8 @@
                 "name": "League City Proposition C",
                 "total absentee votes": "1,899",
                 "total early votes": "22,069",
-                "total election day votes": "5,912",
-                "total race votes": "29,880",
+                "total election day votes": "29,880",
+                "total race votes": "5,912",
                 "choices": [
                     {
                         "name": "",
@@ -1477,13 +1477,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "League City Proposition D",
                 "total absentee votes": "1,849",
                 "total early votes": "21,068",
-                "total election day votes": "5,617",
-                "total race votes": "28,534",
+                "total election day votes": "28,534",
+                "total race votes": "5,617",
                 "choices": [
                     {
                         "name": "",
@@ -1507,8 +1507,8 @@
                 "name": "League City Proposition E",
                 "total absentee votes": "1,907",
                 "total early votes": "21,942",
-                "total election day votes": "5,819",
-                "total race votes": "29,668",
+                "total election day votes": "29,668",
+                "total race votes": "5,819",
                 "choices": [
                     {
                         "name": "",
@@ -1532,8 +1532,8 @@
                 "name": "League City Proposition F",
                 "total absentee votes": "1,884",
                 "total early votes": "20,946",
-                "total election day votes": "5,517",
-                "total race votes": "28,347",
+                "total election day votes": "28,347",
+                "total race votes": "5,517",
                 "choices": [
                     {
                         "name": "",
@@ -1557,8 +1557,8 @@
                 "name": "League City Proposition G",
                 "total absentee votes": "1,903",
                 "total early votes": "21,547",
-                "total election day votes": "5,629",
-                "total race votes": "29,079",
+                "total election day votes": "29,079",
+                "total race votes": "5,629",
                 "choices": [
                     {
                         "name": "",
@@ -1582,8 +1582,8 @@
                 "name": "League City Proposition H",
                 "total absentee votes": "1,780",
                 "total early votes": "19,970",
-                "total election day votes": "5,240",
-                "total race votes": "26,990",
+                "total election day votes": "26,990",
+                "total race votes": "5,240",
                 "choices": [
                     {
                         "name": "",
@@ -1607,8 +1607,8 @@
                 "name": "League City Proposition I",
                 "total absentee votes": "1,887",
                 "total early votes": "21,074",
-                "total election day votes": "5,521",
-                "total race votes": "28,482",
+                "total election day votes": "28,482",
+                "total race votes": "5,521",
                 "choices": [
                     {
                         "name": "",
@@ -1640,13 +1640,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "League City Proposition J",
                 "total absentee votes": "1,870",
                 "total early votes": "21,077",
-                "total election day votes": "5,530",
-                "total race votes": "28,477",
+                "total election day votes": "28,477",
+                "total race votes": "5,530",
                 "choices": [
                     {
                         "name": "",
@@ -1670,8 +1670,8 @@
                 "name": "League City Proposition K",
                 "total absentee votes": "1,862",
                 "total early votes": "20,785",
-                "total election day votes": "5,410",
-                "total race votes": "28,057",
+                "total election day votes": "28,057",
+                "total race votes": "5,410",
                 "choices": [
                     {
                         "name": "",
@@ -1695,8 +1695,8 @@
                 "name": "League City Proposition L",
                 "total absentee votes": "1,810",
                 "total early votes": "20,111",
-                "total election day votes": "5,285",
-                "total race votes": "27,206",
+                "total election day votes": "27,206",
+                "total race votes": "5,285",
                 "choices": [
                     {
                         "name": "",
@@ -1720,8 +1720,8 @@
                 "name": "League City Proposition M",
                 "total absentee votes": "1,812",
                 "total early votes": "20,502",
-                "total election day votes": "5,357",
-                "total race votes": "27,671",
+                "total election day votes": "27,671",
+                "total race votes": "5,357",
                 "choices": [
                     {
                         "name": "",
@@ -1745,8 +1745,8 @@
                 "name": "League City Proposition N",
                 "total absentee votes": "1,845",
                 "total early votes": "20,397",
-                "total election day votes": "5,336",
-                "total race votes": "27,578",
+                "total election day votes": "27,578",
+                "total race votes": "5,336",
                 "choices": [
                     {
                         "name": "",
@@ -1770,8 +1770,8 @@
                 "name": "League City Proposition O",
                 "total absentee votes": "1,813",
                 "total early votes": "20,412",
-                "total election day votes": "5,374",
-                "total race votes": "27,599",
+                "total election day votes": "27,599",
+                "total race votes": "5,374",
                 "choices": [
                     {
                         "name": "",
@@ -1803,13 +1803,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Trustee Position 4  - SFISD",
                 "total absentee votes": "391",
                 "total early votes": "5,184",
-                "total election day votes": "1,210",
-                "total race votes": "6,785",
+                "total election day votes": "6,785",
+                "total race votes": "1,210",
                 "choices": [
                     {
                         "name": "Clay Hertenberger",
@@ -1849,8 +1849,8 @@
                 "name": "Trustee Position 5  - SFISD",
                 "total absentee votes": "380",
                 "total early votes": "5,139",
-                "total election day votes": "1,201",
-                "total race votes": "6,720",
+                "total election day votes": "6,720",
+                "total race votes": "1,201",
                 "choices": [
                     {
                         "name": "James Grassmuck",
@@ -1890,8 +1890,8 @@
                 "name": "Trustee Position 6  - SFISD",
                 "total absentee votes": "293",
                 "total early votes": "4,474",
-                "total election day votes": "1,069",
-                "total race votes": "5,836",
+                "total election day votes": "5,836",
+                "total race votes": "1,069",
                 "choices": [
                     {
                         "name": "Rusty Norman",
@@ -1907,8 +1907,8 @@
                 "name": "Trustee Position 2 (unexpired term, expiring November 2020)  - FISD",
                 "total absentee votes": "553",
                 "total early votes": "7,737",
-                "total election day votes": "1,381",
-                "total race votes": "9,671",
+                "total election day votes": "9,671",
+                "total race votes": "1,381",
                 "choices": [
                     {
                         "name": "Dakota Carter",
@@ -1932,8 +1932,8 @@
                 "name": "Trustee Position 1  - High Island ISD",
                 "total absentee votes": "15",
                 "total early votes": "87",
-                "total election day votes": "48",
-                "total race votes": "150",
+                "total election day votes": "150",
+                "total race votes": "48",
                 "choices": [
                     {
                         "name": "Bennie Barrow",
@@ -1982,7 +1982,7 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Trustee Position 6  - High Island ISD",
                 "total absentee votes": "0",
@@ -2021,8 +2021,8 @@
                 "name": "Commissioner  - GC Navigation Dist 1",
                 "total absentee votes": "706",
                 "total early votes": "5,173",
-                "total election day votes": "1,839",
-                "total race votes": "7,718",
+                "total election day votes": "7,718",
+                "total race votes": "1,839",
                 "choices": [
                     {
                         "name": "Thomas E. \"Ted\" Farmer, Jr.",
@@ -2046,8 +2046,8 @@
                 "name": "Galveston County MUD No. 66 Proposition A",
                 "total absentee votes": "6",
                 "total early votes": "102",
-                "total election day votes": "52",
-                "total race votes": "160",
+                "total election day votes": "160",
+                "total race votes": "52",
                 "choices": [
                     {
                         "name": "",
@@ -2079,13 +2079,13 @@
         "report generated date time": "11\/13\/2018 06:34 PM",
         "precincts reporting": "162",
         "total precincts": "162",
-        "rows": [
+        "races": [
             {
                 "name": "Galveston County MUD No. 66 Proposition B",
                 "total absentee votes": "7",
                 "total early votes": "103",
-                "total election day votes": "53",
-                "total race votes": "163",
+                "total election day votes": "163",
+                "total race votes": "53",
                 "choices": [
                     {
                         "name": "",
