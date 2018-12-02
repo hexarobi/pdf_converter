@@ -1,4 +1,4 @@
-This tool converts county-specific PDF documents into JSON format for easy importing.
+This tool converts county-specific election result PDF documents into JSON format for easy importing.
 
 ## Install
 
