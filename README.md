@@ -22,27 +22,15 @@ The JSON data is saved with the same filename as the original PDF but with a .js
  
 ## Create new Converters
 
-Create a new folder and copy an existing Converter.php file into the folder.
+Create a new directory within the existing `Counties` directory and name it for the new county you are building a converter for.
 
-Implement a parsePageText function that parses the text returned from the PDF document into JSON data. 
-Usually this is done by building long Regular Expressions based on the formatting of the document.
+A converter must implement a parsePageText method and return a structured array built from that text, however since most reports follow a common format a ConverterTemplate is available to simplify individual converters.
+
+Most election result PDF documents breakdown into a `Pages`->`Races`->`Choices` relationship, 
+Each page contains some number of races, and each race contains some number of choices.
+
+To support this common model, the ConverterTemplate contains helper methods so that the only methods that need to be implemented by a new converter are the parser methods for a Page, a set of Races, and a set of Choices. Each parser uses a Regular Expression pattern to extract the relevant data points and map them into a defined structure, before passing the contained text down to the next parser.
 
 Add the new converter to the ConverterFactory so it can be executed with the main converter.php script.
 
-When building RegEx rules, I recommend copying the section you are currently working on into 
-RegEx101.com and slowly building your parsing rules up there. If you make a mistake you should notice it instantly, 
-rather than trying to debug why it simply doesn't match.
-
-Most PDF documents breakdown into a Pages->Races->Choices relationship. 
-Each page has some number of races on it, and each race has some number of choices in it. 
-This distinction is important to properly handle the cases when the number of choices per race (or races per page) changes.
-
-Start by pasting the entire parsed page into RegEx101.com and try to build a rule that anchors on the page headers and footers.
-It should extract any relevant data from the headers and footers, and all of the body data as a new string.
-
-The body content is passed to the next parser that parses out the data about each race, as well as a new string containing all the choices.
-
-Finally, the choice string is parsed to get relevant data about each choice.
-
-All the parsed data is returned as a single JSON object that should represents all the data and relationships that were visible in the original PDF report.
-
+When building RegEx rules, I recommend using a tool (like RegEx101.com) to help visualize how the string is being matched as you build it. If you make a mistake it's much easier to catch and fix as you go, rather than trying to debug why a fully completed pattern doesn't match.
