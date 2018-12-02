@@ -2,21 +2,18 @@
 
 namespace TexasDemocrats\PdfConverter\Counties\Travis;
 
-use RuntimeException;
 use TexasDemocrats\PdfConverter\ConverterTemplate;
 
 class Converter extends ConverterTemplate
 {
+    private const PAGE_PATTERN = '([^\n]*)\n([^\n]*)\n([^\n]*)\n([^\n]*)\n([^\n]*)Official Results\s+([^\n]*)\s+Precinct (\d+)\s+Total Registered Voters\s+Total registered voters in Precinct \d+\s+([\d,]+)\s+([\d,]+)\s+Total Ballots Cast in Precinct\s+% of Total Registered Voters in Precinct\s+% of Total Votes Cast in Precinct\s+Early Voting\sElection Day\sTotal Vote\s+([\d,]+)\s([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+Early Voting\sElection Day\sTotal Vote\s+(.*)Page (\d+) of (\d+)';
+    private const RACE_PATTERN = '(.*?), Vote For 1\s+(.*?)\s+([\d,]+)\s+Total Votes Counted in this Race:\s+([\d,]+)\s+([\d,]+)\s+';
+    private const CHOICE_PATTERN = '([\d,]+)\s+([\d,]+)\s+[\d.]+%\s+([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([^\n]+)';
 
     public function parsePageText($pageText) : array {
-
-        $matchPattern = '/([^\n]*)\n([^\n]*)\n([^\n]*)\n([^\n]*)\n([^\n]*)Official Results\s+([^\n]*)\s+Precinct (\d+)\s+Total Registered Voters\s+Total registered voters in Precinct \d+\s+([\d,]+)\s+([\d,]+)\s+Total Ballots Cast in Precinct\s+% of Total Registered Voters in Precinct\s+% of Total Votes Cast in Precinct\s+Early Voting\sElection Day\sTotal Vote\s+([\d,]+)\s([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+[\d.]+%\s+([\d,]+)\s+Early Voting\sElection Day\sTotal Vote\s+(.*)Page (\d+) of (\d+)/ms';
-        if (! preg_match_all($matchPattern, $pageText, $matches)) {
-            throw new RuntimeException('Could not match page header');
-        }
-
-        $data = [
-            'page_title' => trim(str_replace("\n", " ", $matches[1][0])),
+        $matches = $this->getRegExMatches(self::PAGE_PATTERN, $pageText);
+        return [
+            'page_title' => trim(str_replace("\n", ' ', $matches[1][0])),
             'county' => $matches[2][0],
             'election date' => $matches[3][0],
             'report generated date' => $matches[4][0],
@@ -29,72 +26,45 @@ class Converter extends ConverterTemplate
             'election day ballots cast in precinct' => $matches[12][0],
             'page' => $matches[14][0],
             'total pages' => $matches[15][0],
-            'rows' => $this->parsePageRows($matches[13][0]),
+            'rows' => $this->parseRacesText($matches[13][0]),
         ];
-
-        return $data;
     }
 
-    private function parsePageRows($pageRowsText): array
+    private function parseRacesText($racesText): array
     {
 
-        $matchPattern = '/(.*?), Vote For 1\s+(.*?)\s+([\d,]+)\s+Total Votes Counted in this Race:\s+([\d,]+)\s+([\d,]+)\s+/ms';
-        if (! preg_match_all($matchPattern, $pageRowsText, $matches)) {
-            throw new RuntimeException('Could not match any page rows: "' . $pageRowsText . '"');
-        }
+        $matches = $this->getRegExMatches(self::RACE_PATTERN, $racesText);
 
         $results = [];
 
-        foreach ($matches[1] as $raceIndex=>$raceName) {
-            $results[$raceIndex] = [];
-            $results[$raceIndex]['name'] = $raceName;
-        }
-
-        foreach ($matches[3] as $raceIndex=>$raceEarlyVotes) {
-            $results[$raceIndex]['total early votes'] = $raceEarlyVotes;
-        }
-
-        foreach ($matches[4] as $raceIndex=>$raceElectionDayVotes) {
-            $results[$raceIndex]['total election day votes'] = $raceElectionDayVotes;
-        }
-
-        foreach ($matches[5] as $raceIndex=>$raceVotes) {
-            $results[$raceIndex]['total race votes'] = $raceVotes;
-        }
-
-        foreach ($matches[2] as $raceIndex=>$raceChoices) {
-            $results[$raceIndex]['choices'] = $this->parseRaceChoices($raceChoices);
-        }
+        $this->addToResults($results, 'name', $matches[1]);
+        $this->addToResults($results, 'total early votes', $matches[3]);
+        $this->addToResults($results, 'total election day votes', $matches[4]);
+        $this->addToResults($results, 'total race votes', $matches[5]);
+        $this->addToResults($results, 'total election day votes', $matches[4]);
+        $this->addToResults(
+            $results,
+            'choices',
+            $matches[2],
+            function($text) {
+                return $this->parseChoicesText($text);
+            }
+        );
 
         return $results;
     }
 
-    private function parseRaceChoices($raceChoices): array
+    private function parseChoicesText($choicesText): array
     {
 
-        $matchPattern = '/([\d,]+)\s+([\d,]+)\s+[\d.]+%\s+([\d,]+)\s+[\d.]+%\s+[\d.]+%\s+([^\n]+)/ms';
-        if (! preg_match_all($matchPattern, $raceChoices, $matches)) {
-            throw new RuntimeException('Could not match any race choices: "' . $raceChoices . '"');
-        }
+        $matches = $this->getRegExMatches(self::CHOICE_PATTERN, $choicesText);
 
         $results = [];
 
-        foreach ($matches[4] as $choiceIndex=>$choiceName) {
-            $results[$choiceIndex] = [];
-            $results[$choiceIndex]['name'] = $choiceName;
-        }
-
-        foreach ($matches[1] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['early votes'] = $choiceEarly;
-        }
-
-        foreach ($matches[2] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['election day votes'] = $choiceEarly;
-        }
-
-        foreach ($matches[3] as $choiceIndex=>$choiceEarly) {
-            $results[$choiceIndex]['total votes'] = $choiceEarly;
-        }
+        $this->addToResults($results, 'name', $matches[4]);
+        $this->addToResults($results, 'early votes', $matches[1]);
+        $this->addToResults($results, 'election day votes', $matches[2]);
+        $this->addToResults($results, 'total votes', $matches[3]);
 
         return $results;
     }
