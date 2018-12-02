@@ -1,6 +1,6 @@
 This tool converts county-specific PDF documents into JSON format for easy importing.
 
-##Install
+## Install
 
 Install PHP 7.x (http://php.net/manual/en/install.php)
 
@@ -8,7 +8,7 @@ Install composer (https://getcomposer.org/doc/00-intro.md)
 
 Run `composer install` to install required dependancies.
 
-##Run
+## Run
 
 To convert a PDF file, place the PDF file into the proper county folder.
 The first PDF file found in the folder will be converted.
@@ -20,7 +20,7 @@ Run the following command to convert from PDF to JSON
 
 The JSON data is saved with the same filename as the original PDF but with a .json extension.
  
-##Create new Converters
+## Create new Converters
 
 Create a new folder and copy an existing Converter.php file into the folder.
 
